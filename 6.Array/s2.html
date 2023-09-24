@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let sum=[1,2,3,4,5,6]
+        // for(let i=0; i<sum.length; i++){
+        //     console.log(sum[i])
+        // }
+        //for each
+        sum.forEach((element)=>{
+            console.log(element*2)
+        })
+
+        //Array.from
+        let a="Vaibhav"
+        let arr=Array.from(a) //Covert string into array
+        console.log(arr)  
+        
+        //for...of
+        for(let i of sum){
+            console.log(i)
+        }
+        //for in 
+        for(let i in sum){
+            console.log(i)
+        }
+    </script>
+</body>
+</html>

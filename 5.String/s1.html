@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a="Rahul"
+        let b="Vaibhav"
+        let name=`${a} and  ${b} Good Friend `
+        document.write(name)
+        const ab='kaise ho'
+        const ac="thik hu"
+        document.write(ab.toLowerCase())
+        document.write('<br>',ab.toUpperCase())
+        document.write('<br>',ab.slice(2,4))
+        document.write('<br>',ab.replace("kaise","kasa "))
+        document.write('<br>',ab.concat(" ",ac).length)
+        let x="      vaibhav     "
+        console.log(x)
+        //document.write('<br>',x.trim())
+
+        let y="Vaibhav"
+        for(let i of y){
+            document.write("<br>",i)
+        }
+
+        let n="How are you"
+        let m="You"
+        document.write('<br>',n.includes(m))
+        document.write('<br>',`The Word "${m}" ${n.includes(m) ? "is":"is not"} in the sentence`)
+
+
+        const str1 = 'Saturday night plans';
+        console.log(str1.startsWith('Sat'))
+        console.log(str1.startsWith('Sat'));
+
+        console.log(str1.endsWith('plans'))
+        console.log(str1.endsWith('Sat'));
+
+        let bb="please give me rs 1000"
+        let amt=bb.slice('please give me rs'.length)
+        document.write("<br>",amt)
+
+
+
+    </script>
+</body>
+</html>

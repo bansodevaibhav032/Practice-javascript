@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    //Q1
+    let runagain=true
+    let c=0
+    let candr=(age)=>{
+            return age>=18?true:false 
+    }
+    while(runagain){
+        let age=prompt("Enter a Age:")
+        age=Number.parseInt(age)
+        if(candr(age)){
+            document.write("Your attempt is :",c+1)
+            document.write("<br> Yor'e age is above 18+ so you can Drive. <br>")
+            
+            c++
+        }
+        else if(age!=Number){
+            document.write("Your attempt is :",c+1)
+            document.write("You Entered Wrong Input...Please Enter Number:<br>")
+            c++
+        }
+        else{
+            document.write("Your attempt is :",c+1)
+            document.write("go grab some chocholate!<br>")
+            c++                                                       
+        }
+        runagain=confirm("Do you wanna promte again!")
+    }
+   
+
+
+   </script> 
+</body>
+</html>

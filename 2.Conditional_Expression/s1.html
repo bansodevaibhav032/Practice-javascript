@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let a=prompt("Enter a age:")
+    
+        console.log(typeof a)
+        a=Number.parseInt(a)  //Converting the string into Number
+        document.write(typeof a,"<br>") 
+        if(a<0){
+            alert("age is invalid!")
+        }
+        else if(a<10){
+            alert("Your are a kid so go watch carton!")
+        }
+        else if(a<18 && a>=9){
+            alert("You are a kid and you can think about to voting!")
+        }
+        else{
+            alert("You are 18+ so you can vote ")
+        }
+        document.write("Done <br>")
+        // Ternary Operator 
+        document.write("You can ",(a>=18? "Vote":"not Vote"))
+
+        
+        // const x={
+        //     name:"vaibhav",
+        //     std:10
+
+        // }
+        // document.write("name:",x.name)
+        // console.log("name:",x.name)
+    </script>
+</body>
+</html>

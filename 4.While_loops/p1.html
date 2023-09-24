@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // WAP to print the marks of stud in one obj using for loop
+        let mark={
+            vaibhav:99,
+            rahul:43,
+            shubham:54,
+            raju:5
+        }
+        for(let i=0; i<Object.keys(mark).length; i++){
+            document.write("Marks of "+ Object.keys(mark)[i] + " Are "+ mark[Object.keys(mark)[i]],"<br>")
+        }
+
+
+        //using for in loop
+        let marks={
+            vaibhav:99,
+            rahul:43,
+            shubham:54,
+            raju:5
+        }
+        document.write("#Using for in loop <br>")
+        for(let key in marks){
+            document.write("Marks of "+ key + " Are "+ mark[key],"<br>")
+        }
+        //WAP to print  try again until user enter correct Number 
+        // let cn=100
+        // let i
+        // while(i !=cn){
+        //     i=prompt("Enter a Number :")
+        //     console.log("Try Again!")
+        // }
+        // document.write("You Entered correct Number")
+
+        //WAP function to find out mean of five Numbers:
+        const ab=(a,b,c,d,e,f)=>{
+            let sum=a+b+c+d+e
+            return sum/5
+        }
+        document.write("Mean:",ab(1,2,3,4,5))
+        
+
+    
+
+    </script>
+</body>
+</html>

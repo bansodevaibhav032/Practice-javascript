@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sneak Water Gun Game</title>
+    <link rel="stylesheet" href="s1.css">
+</head>
+<body>
+    <div class="game-container">
+        <h1>Sneak Water Gun Game</h1>
+        <div class="player">
+            <h2>Your Choice</h2>
+            <button onclick="playerChoice('sneak')">Sneak</button>
+            <button onclick="playerChoice('water')">Water</button>
+            <button onclick="playerChoice('gun')">Gun</button>
+        </div>
+        
+        <div class="result" id="result"></div>
+
+        <div class="computer">
+            <h2>Computer's Choice</h2>
+            <div id="computer-choice" class="choice"></div>
+        </div>
+    </div>
+
+
+    <script>
+    const choices = ['sneak', 'water', 'gun'];
+
+    let playerChoice=(playerSelection) => {
+        const computerSelection = choices[Math.floor(Math.random() * choices.length)];
+
+        document.getElementById('computer-choice').innerText = computerSelection.toUpperCase();
+
+        const result = determineWinner(playerSelection, computerSelection);
+        document.getElementById('result').innerText = `You ${result}!`;
+    }
+
+    let determineWinner=(player, computer) => {
+        if (player === computer) {
+            return 'tied 🤝';
+            document.write("hello")
+        } 
+        else if((player === 'sneak' && computer === 'water') ||
+                 (player === 'water' && computer === 'gun')  ||
+                 (player === 'gun' && computer === 'sneak'))
+                {
+                     return 'win 🎉';
+                }
+        else if ((computer === 'sneak' && player === 'water') ||
+                 (computer === 'water' && player === 'gun')  ||
+                 (computer === 'gun' && player === 'sneak'))
+                 {
+                     return 'lose 😞';
+                    }
+    }
+    </script>
+</body>
+</html>
