@@ -6,9 +6,42 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <div>
+        hello World
+    </div>
     <script>
+        // document.write("Hello ")   
+        // let a=setTimeout(function(){
+        //     alert("I am Inside the setTimeout")
+        // }
+        // ,2000   )
+        // let b=prompt("Do you want to perform setTimeout?")
+        // if(b=="n"){
+        //     clearTimeout(a)
+        // }
+        // console.log(a)
+        const sun=(a,b)=>{
+            document.write("The sum of a and b:",a+b)
+        }
+        setTimeout(sun,1000,20,30)
+
+
+        // setInterval(ab=() => {
+        //     alert("set interval")            
+        // }, 400000);
+        let count=0
+        let o
+        const sub=(x,y)=>{
+            document.write("<br> sub of x and y:",x-y)
+            count++
+            if(count>=3){
+            clearInterval(o)
+          }
+        }
+        o=setInterval(sub,1000,50,100)
         
+        
+
     </script>
 </body>
 </html>

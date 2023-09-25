@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container" onmouseenter="alert('container ke ander mouse gaya')" > 
+    <button onclick="alert('hello'); let a=6; 
+    let b=4; console.log(a+b);"> click me</button>
+    </div>
+    <script>
+        let x=document.getElementsByClassName("container")[0]
+        console.log(x)
+        x.onclick=()=>{
+            let z=document.getElementsByClassName("container")[0]
+            z.innerHTML="hello world"
+
+        }
+    </script>
+</body>
+</html>
