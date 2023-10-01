@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>async and await</title>
+</head>
+<body>
+    <h1>
+        async and await
+    </h1>
+    
+    <script>
+        async function abc() {
+            let delhiWeather = new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                            resolve("27 Deg")
+                    }, 2000)
+            })
+
+            let bangaloreWeather = new Promise((resolve, reject) => {
+                    setTimeout(() => {
+                            resolve("21 Deg")
+                    }, 5000)
+            })
+
+            // delhiWeather.then(alert)
+            // bangaloreWeather.then(alert)
+            console.log("Fetching Delhi Weather Please wait ...")
+            let delhiW = await delhiWeather
+            console.log("Fetched Delhi Weather: " + delhiW)
+            console.log("Fetching Bangalore Weather Please wait ...")
+            let bangaloreW = await bangaloreWeather
+            console.log("Fetched Bangalore Weather: " + bangaloreW)
+            return [delhiW, bangaloreW]
+        }
+
+        const xyz = async () => {
+                console.log("Hey I am xyz and I am waiting ")
+        }
+
+        const main1 = async () => {
+                console.log("Welcome to weather control room")
+                let a = await abc()
+                let b = await xyz()
+
+        }
+        main1()
+    </script>
+</body>
+</html>
