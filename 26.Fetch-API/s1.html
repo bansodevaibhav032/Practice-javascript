@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fetch API</title>
+</head>
+<body>
+    <div>
+        hello World
+    </div>
+
+    <script>
+        let p = fetch("https://goweather.herokuapp.com/weather/Curitiba")
+        p.then((response) => {
+                console.log(response.status)
+                console.log(response.ok)
+                console.log(response.headers)
+                return response.json()
+        }).then((value2) => {
+                console.log(value2)
+        })
+
+
+        let x= fetch("https://goweather.herokuapp.com/weather/Curitiba")
+        x.then((response) => { 
+                return response.text()
+        }).then((response) => {
+                document.write(response)
+        })
+    </script>
+</body>
+</html>
