@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>session storage</title>
+</head>
+<body>
+    <script>
+        // sessionStorage.getItem("name")
+        // sessionStorage.clear()
+        // sessionStorage.removeItem("name")
+        // sessionStorage.setItem("name", "vaibhav")
+        // sessionStorage.removeItem("name")
+
+        // it will get alert msg when you run these code in two tab if value changed then other tab get alert msg
+
+        // localStorage.setItem("name","vaibhav")
+        // localStorage.setItem("name","vab")
+        
+        window.onstorage = (e) => {
+                alert("changed")
+                console.log(e)
+        }
+    </script>      
+</body>
+</html>
