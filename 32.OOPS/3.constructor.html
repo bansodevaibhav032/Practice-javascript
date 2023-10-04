@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class & Obj</title>
+  </head>
+  <body>
+
+    <script>
+        class RailwayForm {
+        constructor(givenname, trainno, address) {
+            console.log("CONSTRUCTOR CALLED..." + givenname + " " + trainno)
+            this.name = givenname
+            this.trainno = trainno
+            this.address = address
+        }
+
+        preview() {
+            alert(this.name + ": Your form is for Train number: " + this.trainno + " and your address is " + this.address)
+        }
+
+        submit() {
+            alert(this.name + ": Your form is submitted for train number: " + this.trainno)
+        }
+
+        cancel() {
+            this.trainno = 0
+            alert(this.name + ": This form is cancelled for train number: " + this.trainno)
+            
+        }
+        }
+
+        let vaibhavForm = new RailwayForm("Vaibhav", 13488, "Pune")
+        vaibhavForm.preview()
+        vaibhavForm.submit()
+        vaibhavForm.cancel()
+    </script>
+  </body>
+</html>
